@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industrial Power Solution Haiti</title>
+  <style>
+    :root{
+      --navy:#002B5B;
+      --navy-dark:#061A33;
+      --navy-deep:#031225;
+      --orange:#F97316;
+      --orange-dark:#EA580C;
+      --white:#FFFFFF;
+      --light:#F4F6F8;
+      --border:#E5E7EB;
+      --text-dark:#111827;
+      --text-muted:#6B7280;
+      --whatsapp:#16C75A;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:var(--text-dark);background:var(--white)}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+    .topbar{height:44px;background:var(--navy-dark);color:#fff}
+    .topbar .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .topbar__tagline{font-size:14px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}
+    .topbar__right{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700}
+    .topbar__item,.socials{display:flex;align-items:center;gap:8px;white-space:nowrap}
+    .topbar__item svg{color:var(--orange)}
+    .socials{gap:14px}
+    .socials a{display:inline-flex;color:#fff;transition:.2s ease}
+    .socials a:hover{color:var(--orange)}
+
+    .navbar{height:110px;background:#fff;border-bottom:1px solid var(--border);position:relative;z-index:5}
+    .navbar .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .logo img{width:110px;max-width:100%;height:auto;object-fit:contain;display:block}
+    .navlinks{display:flex;align-items:center;gap:54px}
+    .navlinks a{font-size:15px;font-weight:900;color:var(--navy-dark);text-transform:uppercase;position:relative;padding:12px 0}
+    .navlinks a.active::after{content:"";position:absolute;left:0;bottom:-14px;width:58px;height:4px;background:var(--orange)}
+    .navicons{display:flex;align-items:center;gap:24px;color:var(--navy-dark)}
+    .navicons a{width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;position:relative}
+    .cart-badge{position:absolute;top:-10px;right:-10px;width:22px;height:22px;border-radius:50%;background:var(--orange);color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+
+    .hero{min-height:620px;background-image:linear-gradient(90deg,rgba(3,18,37,.94) 0%,rgba(3,18,37,.80) 38%,rgba(3,18,37,.35) 68%,rgba(3,18,37,.12) 100%),url("assets/image1.png");background-size:cover;background-position:center right;display:flex;align-items:center;justify-content:flex-start;position:relative;overflow:hidden}
+    .hero .container{padding-left:80px}
+    .hero__content{width:560px;max-width:100%;margin-left:0;padding:40px 0}
+    .hero-title{font-size:66px;line-height:.95;font-weight:900;letter-spacing:-1px;text-transform:uppercase;color:#fff;margin-bottom:24px}
+    .hero-title span{color:var(--orange)}
+    .hero-description{font-size:18px;line-height:1.7;color:rgba(255,255,255,.92);max-width:500px;margin-bottom:30px}
+    .hero-buttons{display:flex;justify-content:flex-start;align-items:center;gap:20px;flex-wrap:wrap}
+    .btn{height:54px;padding:0 30px;border-radius:4px;font-size:14px;font-weight:900;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:12px;transition:.25s ease}
+    .btn--orange{background:var(--orange);color:#fff}
+    .btn--orange:hover{background:var(--orange-dark);transform:translateY(-2px)}
+    .btn--outline{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.85);color:#fff}
+    .btn--outline:hover{background:#fff;color:var(--navy-dark)}
+    .whatsapp-float{position:absolute;right:36px;bottom:60px;min-height:64px;padding:0 22px 0 16px;background:var(--whatsapp);border-radius:40px;display:flex;align-items:center;gap:12px;box-shadow:0 18px 45px rgba(22,199,90,.35);color:#fff}
+    .whatsapp-float svg{width:34px;height:34px;flex:0 0 auto}
+    .whatsapp-float strong{display:block;font-size:16px;font-weight:900;line-height:1.1}
+    .whatsapp-float span{display:block;font-size:14px;font-weight:500;line-height:1.2}
+
+    .section-title{text-align:center;font-size:30px;line-height:1.2;font-weight:900;color:var(--navy-dark);text-transform:uppercase;margin-bottom:12px}
+    .section-title span{color:var(--orange)}
+    .title-line{width:64px;height:3px;background:var(--navy-dark);margin:0 auto 34px}
+
+    .expertise{padding:52px 0 60px;background:#fff}
+    .services-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+    .service-card{height:230px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:24px 12px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:.25s ease;box-shadow:0 8px 20px rgba(6,26,51,.04)}
+    .service-card:hover{transform:translateY(-6px);border-color:var(--orange);box-shadow:0 18px 35px rgba(6,26,51,.10)}
+    .service-card svg{width:54px;height:54px;color:var(--navy);margin-bottom:18px;flex:0 0 auto}
+    .service-card h3{font-size:13px;line-height:1.25;font-weight:900;color:var(--navy);text-transform:uppercase;min-height:34px;display:flex;align-items:center;justify-content:center}
+    .mini-line{width:28px;height:3px;background:var(--orange);margin:10px auto 12px}
+    .service-card p{font-size:12px;line-height:1.55;color:#374151}
+
+    .stats{background:var(--navy-dark);padding:34px 0;color:#fff}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+    .stat{text-align:center;border-right:1px solid rgba(255,255,255,.25);padding:0 20px}
+    .stat:last-child{border-right:0}
+    .stat svg{width:36px;height:36px;color:var(--orange);margin-bottom:8px}
+    .stat strong{display:block;font-size:36px;font-weight:900;line-height:1;color:#fff}
+    .stat span{font-size:14px;font-weight:600;color:rgba(255,255,255,.9)}
+
+    .about{padding:60px 0;background:#fff}
+    .about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+    .about-img{width:100%;height:280px;object-fit:cover;border-radius:4px;box-shadow:0 14px 30px rgba(6,26,51,.12)}
+    .about h2{font-size:30px;font-weight:900;text-transform:uppercase;color:var(--navy-dark);margin-bottom:12px;line-height:1.2}
+    .about h2 span{color:var(--orange)}
+    .about-line{width:52px;height:3px;background:var(--navy-dark);margin-bottom:24px}
+    .about p{font-size:16px;line-height:1.8;color:#374151;margin-bottom:18px}
+    .btn--navy{background:var(--navy);color:#fff}
+    .btn--navy:hover{background:var(--navy-dark);transform:translateY(-2px)}
+
+    .products{padding:42px 0 64px;background:var(--light)}
+    .product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+    .product-card{height:220px;border-radius:6px;overflow:hidden;position:relative;box-shadow:0 14px 28px rgba(6,26,51,.12);background:var(--navy-dark)}
+    .product-card img{width:100%;height:100%;object-fit:cover;transition:.35s ease}
+    .product-card:hover img{transform:scale(1.06)}
+    .product-label{position:absolute;left:0;right:0;bottom:0;min-height:52px;background:var(--navy);display:flex;align-items:center;justify-content:center;padding:0 10px}
+    .product-label h3{font-size:14px;line-height:1.2;font-weight:900;color:#fff;text-transform:uppercase;text-align:center}
+    .products-cta{margin:34px auto 0;width:290px;max-width:100%;height:54px}
+
+    .footer{background:var(--navy-deep);color:#fff;padding:36px 0 18px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+    .footer h3{font-size:20px;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px}
+    .footer h4{font-size:15px;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px}
+    .footer p,.footer a{font-size:14px;line-height:1.7;color:rgba(255,255,255,.8)}
+    .footer a{display:block;margin-bottom:8px}
+    .footer a:hover{color:var(--orange)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:24px;padding-top:16px;text-align:center;font-size:13px;color:rgba(255,255,255,.7)}
+
+    @media (max-width:1100px){
+      .logo img{width:245px}.navlinks{gap:28px}.services-grid{grid-template-columns:repeat(4,1fr)}.product-grid{grid-template-columns:repeat(3,1fr)}
+    }
+    @media (max-width:768px){
+      .container{padding:0 18px}.topbar{height:auto;padding:8px 0}.topbar .container{justify-content:center;flex-wrap:wrap;gap:8px}.topbar__tagline{font-size:12px;text-align:center}.topbar__right{font-size:12px;gap:14px}.topbar__email{display:none}.navbar{height:auto;padding:16px 0}.navbar .container{flex-direction:column;gap:14px}.logo img{width:210px}.navlinks{gap:18px;flex-wrap:wrap;justify-content:center}.navlinks a{font-size:13px}.navlinks a.active::after{bottom:-6px;width:42px;height:3px}.navicons{display:none}.hero{min-height:620px;height:auto;padding:80px 0;background-position:center}.hero h1{font-size:58px}.hero p{font-size:16px}.hero-buttons{flex-direction:column;align-items:flex-start}.btn{width:100%;max-width:320px}.whatsapp-float{position:static;margin-top:24px;width:fit-content}.services-grid{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}.stat{border-right:0}.about-grid{grid-template-columns:1fr;gap:28px}.about-img{height:240px}.product-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr}}
+    @media (max-width:520px){
+      .services-grid,.product-grid{grid-template-columns:1fr}.product-card{height:240px}.service-card{height:auto;min-height:220px}.hero{padding:64px 0}.whatsapp-float{min-height:58px}.hero h1{font-size:42px;line-height:1}.section-title,.about h2{font-size:25px}.stat strong{font-size:32px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar__tagline">EXPERTISE – QUALITÉ – SÉCURITÉ – PERFORMANCE</div>
+        <div class="topbar__right">
+          <div class="topbar__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19 19.5 19.5 0 0 1 5 12.81 19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L8 9.67a16 16 0 0 0 6.33 6.33l1.23-1.23a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>+509 5666 9084</div>
+          <div class="topbar__item topbar__email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>industrialpowersolutionhaiti@gmail.com</div>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.2l.8-4h-4V9c0-.7.3-1 1-1z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.34 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.51 2 12.04 2zm5.77 14.18c-.24.68-1.41 1.3-1.96 1.35-.5.05-1.12.07-1.8-.11-.42-.13-.95-.31-1.63-.61-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.31.38-.43.5-.14.14-.29.29-.12.57.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.45.29.14.45.12.62-.07.19-.22.72-.84.91-1.12.19-.29.38-.24.64-.14.26.1 1.67.79 1.96.93.29.14.48.22.55.34.07.12.07.72-.17 1.39z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="container">
+        <a class="logo" href="#"><img src="assets/LOGO.jpeg" alt="Industrial Power Solution Haiti"></a>
+        <div class="navlinks">
+          <a class="active" href="#">Accueil</a><a href="#expertise">Services</a><a href="#produits">Produits</a><a href="#apropos">À propos</a><a href="#contact">Contact</a>
+        </div>
+        <div class="navicons">
+          <a href="#" aria-label="Recherche"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2.2"/><path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Compte"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2.2"/></svg></a>
+          <a href="#" aria-label="Panier"><span class="cart-badge">0</span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2.2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2.2"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero-title">VOTRE PARTENAIRE<br>DE CONFIANCE POUR<br><span>DES SOLUTIONS<br>INDUSTRIELLES</span><br><br>FIABLES ET DURABLES</h1>
+          <p class="hero-description">Nous accompagnons les entreprises, institutions, ONG et industries dans la sécurisation de leurs infrastructures critiques et la continuité de leurs opérations.</p>
+          <div class="hero-buttons">
+            <a class="btn btn--orange" href="#expertise">Découvrir nos services <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn btn--outline" href="#produits">Voir nos produits <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+          <a class="whatsapp-float" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.34 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.51 2 12.04 2zm5.77 14.18c-.24.68-1.41 1.3-1.96 1.35-.5.05-1.12.07-1.8-.11-.42-.13-.95-.31-1.63-.61-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.31.38-.43.5-.14.14-.29.29-.12.57.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.45.29.14.45.12.62-.07.19-.22.72-.84.91-1.12.19-.29.38-.24.64-.14.26.1 1.67.79 1.96.93.29.14.48.22.55.34.07.12.07.72-.17 1.39z"/></svg><span><strong>WhatsApp</strong><span>Contactez-nous</span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="expertise" id="expertise">
+      <div class="container">
+        <h2 class="section-title">Nos <span>domaines</span> d’expertise</h2><div class="title-line"></div>
+        <div class="services-grid">
+          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg><h3>Électricité</h3><div class="mini-line"></div><p>Installation, maintenance et dépannage électrique</p></article>
+          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.43 12.98c.04-.32.07-.65.07-.98s-.02-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.6-.22l-2.49 1a7.3 7.3 0 0 0-1.69-.98L14.5 2.4A.5.5 0 0 0 14 2h-4a.5.5 0 0 0-.5.4L9.12 5.07c-.61.24-1.18.56-1.69.98l-2.49-1a.5.5 0 0 0-.6.22l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.32-.07.65-.07.98s.02.66.07.98l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46c.14.24.43.34.68.22l2.49-1c.51.4 1.08.73 1.69.98l.38 2.67c.04.25.25.43.5.43h4c.25 0 .46-.18.5-.43l.38-2.67c.61-.25 1.18-.58 1.69-.98l2.49 1c.25.12.54.02.68-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5z"/></svg><h3>Mécanique</h3><div class="mini-line"></div><p>Maintenance de groupes électrogènes et équipements industriels</p></article>
+          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 13h16l-2 8H2l2-8zm2-9h3v3H6V4zm5 0h3v3h-3V4zm5 0h3v3h-3V4zM5 8h4v3H4.3L5 8zm6 0h3v3h-3V8zm5 0h3l.7 3H16V8z"/></svg><h3>Système solaire photovoltaïque</h3><div class="mini-line"></div><p>Étude, installation et maintenance de systèmes solaires</p></article>
+          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v10H4V5zm2 12h12v2H6v-2zm5-2h2v2h-2v-2zM7 21h10v1H7v-1z"/></svg><h3>Informatique et réseau</h3><div class="mini-line"></div><p>Installation, configuration et maintenance de réseaux</p></article>
+          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 8.5 14 5l2 6-11 3.5-2-6zM16 8l5 2v4l-4-1.4L16 8zM7 16h4v3H7v-3z"/></svg><h3>Caméras de surveillance</h3><div class="mini-line"></div><p>Installation de systèmes de vidéosurveillance intelligents</p></article>
+          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 11 6.5 6.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11h1a1 1 0 0 1 1 1v6h-2v2h-3v-2H8v2H5v-2H3v-6a1 1 0 0 1 1-1h1zm3.2-4-1.1 4h9.8l-1.1-4H8.2zM6.5 15.5A1.5 1.5 0 1 0 6.5 12.5a1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg><h3>Diagnostic automobile</h3><div class="mini-line"></div><p>Diagnostic électronique et maintenance automobile</p></article>
+          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 2h2v7l4.95-4.95 1.41 1.41L14.83 10H22v2h-7.17l4.53 4.54-1.41 1.41L13 13v9h-2v-9l-4.95 4.95-1.41-1.41L9.17 12H2v-2h7.17L4.64 5.46l1.41-1.41L11 9V2z"/></svg><h3>Climatisation</h3><div class="mini-line"></div><p>Installation, entretien et réparation de climatiseurs</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container"><div class="stats-grid">
+        <div class="stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V20h14v-3.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V20h6v-3.5c0-2.33-4.67-3.5-7-3.5z"/></svg><strong>100+</strong><span>Clients satisfaits</span></div>
+        <div class="stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 4h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h4V6a2 2 0 0 1 2-2zm4 4V6h-4v2h4z"/></svg><strong>200+</strong><span>Projets réalisés</span></div>
+        <div class="stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3zm1 6v5h4v2h-6V8h2z"/></svg><strong>24/7</strong><span>Intervention d’urgence</span></div>
+        <div class="stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l6 .9-4.5 4.3 1.1 6.1L12 16.3 6.4 19.3l1.1-6.1L3 8.9 9 8l3-6z"/></svg><strong>5+</strong><span>Années d’expérience</span></div>
+      </div></div>
+    </section>
+
+    <section class="about" id="apropos">
+      <div class="container about-grid">
+        <img class="about-img" src="assets/tecnicien.png" alt="Technicien Industrial Power Solution Haiti">
+        <div><h2>À propos <span>de nous</span></h2><div class="about-line"></div><p><strong>Industrial Power Solution Haiti</strong> est une entreprise spécialisée dans la maintenance, l’installation, la réparation, l’audit et l’optimisation des systèmes électriques, mécaniques et industriels.</p><p>Notre mission est d’offrir des solutions fiables, durables et innovantes pour répondre aux besoins énergétiques et techniques de nos clients.</p><a class="btn btn--navy" href="#contact">En savoir plus sur nous <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </div>
+    </section>
+
+    <section class="products" id="produits">
+      <div class="container">
+        <h2 class="section-title">Catégories <span>de produits</span></h2>
+        <div class="product-grid">
+          <a class="product-card" href="#"><img src="assets/solar.png" alt="Systèmes solaires"><div class="product-label"><h3>Systèmes solaires</h3></div></a>
+          <a class="product-card" href="#"><img src="assets/equipement.png" alt="Équipements électriques"><div class="product-label"><h3>Équipements électriques</h3></div></a>
+          <a class="product-card" href="#"><img src="assets/generator.png" alt="Groupes électrogènes"><div class="product-label"><h3>Groupes électrogènes</h3></div></a>
+          <a class="product-card" href="#"><img src="assets/camera.png" alt="Sécurité et surveillance"><div class="product-label"><h3>Sécurité & surveillance</h3></div></a>
+          <a class="product-card" href="#"><img src="assets/climatic.png" alt="Climatisation"><div class="product-label"><h3>Climatisation</h3></div></a>
+        </div>
+        <a class="btn btn--orange products-cta" href="#">Voir tous les produits <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>Industrial Power Solution Haiti</h3><p>Expertise au service de votre performance industrielle. Solutions électriques, mécaniques, solaires et techniques pour entreprises, institutions et industries.</p></div>
+        <div><h4>Navigation</h4><a href="#">Accueil</a><a href="#expertise">Services</a><a href="#produits">Produits</a><a href="#apropos">À propos</a></div>
+        <div><h4>Contact</h4><p>+509 5666 9084<br>industrialpowersolutionhaiti@gmail.com<br>P16, Village Ekam, Caracol, Haïti</p></div>
+      </div>
+      <div class="footer-bottom">© 2026 Industrial Power Solution Haiti. Tous droits réservés.</div>
+    </div>
+  </footer>
+</body>
+</html>
