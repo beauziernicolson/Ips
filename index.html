@@ -154,6 +154,20 @@
     }
     .service-card p{font-size:12px;line-height:1.55;color:#374151}
 
+    .service-card-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .service-card-link:hover {
+      color: inherit;
+    }
+
+    .service-card-link .service-card {
+      cursor: pointer;
+    }
+
     .stats{background:var(--navy-dark);padding:34px 0;color:#fff}
     .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
     .stat{text-align:center;border-right:1px solid rgba(255,255,255,.25);padding:0 20px}
@@ -411,7 +425,7 @@
           <p class="hero-description">Nous accompagnons les entreprises, institutions, ONG et industries dans la sécurisation de leurs infrastructures critiques et la continuité de leurs opérations.</p>
           <p class="hero-slogan">L’énergie, la performance, notre engagement.</p>
           <div class="hero-buttons">
-            <a class="btn btn--orange" href="#expertise">Découvrir nos services <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn btn--orange" href="services.html">Découvrir nos services <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <a class="btn btn--outline" href="product.html">Voir nos produits <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
           <a class="whatsapp-float" href="https://wa.me/50956669084?text=Bonjour%20Industrial%20Power%20Solution%20Haiti%2C%20j%27ai%20besoin%20d%27un%20service.%20Pouvez-vous%20m%27aider%20%3F" target="_blank" rel="noopener">
@@ -426,28 +440,43 @@
       <div class="container">
         <h2 class="section-title">Nos <span>domaines</span> d’expertise</h2><div class="title-line"></div>
         <div class="services-grid">
-          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg><h3>Électricité</h3><div class="mini-line"></div><p>Installation, maintenance et dépannage électrique</p></article>
-          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.43 12.98c.04-.32.07-.65.07-.98s-.02-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.6-.22l-2.49 1a7.3 7.3 0 0 0-1.69-.98L14.5 2.4A.5.5 0 0 0 14 2h-4a.5.5 0 0 0-.5.4L9.12 5.07c-.61.24-1.18.56-1.69.98l-2.49-1a.5.5 0 0 0-.6.22l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.32-.07.65-.07.98s.02.66.07.98l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46c.14.24.43.34.68.22l2.49-1c.51.4 1.08.73 1.69.98l.38 2.67c.04.25.25.43.5.43h4c.25 0 .46-.18.5-.43l.38-2.67c.61-.25 1.18-.58 1.69-.98l2.49 1c.25.12.54.02.68-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5z"/></svg><h3>Mécanique</h3><div class="mini-line"></div><p>Maintenance de groupes électrogènes et équipements industriels</p></article>
-          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 13h16l-2 8H2l2-8zm2-9h3v3H6V4zm5 0h3v3h-3V4zm5 0h3v3h-3V4zM5 8h4v3H4.3L5 8zm6 0h3v3h-3V8zm5 0h3l.7 3H16V8z"/></svg><h3>Système solaire photovoltaïque</h3><div class="mini-line"></div><p>Étude, installation et maintenance de systèmes solaires</p></article>
-          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v10H4V5zm2 12h12v2H6v-2zm5-2h2v2h-2v-2zM7 21h10v1H7v-1z"/></svg><h3>Informatique et réseau</h3><div class="mini-line"></div><p>Installation, configuration et maintenance de réseaux</p></article>
-          <article class="service-card">
-            <svg viewBox="0 0 60.051 60.051" fill="currentColor" aria-hidden="true">
-              <path d="M56.963,32.026H55.14c-1.703,0-3.088,1.385-3.088,3.088v3.912h-10v-6.219c3.646-1.177,5.957-6.052,5.957-12.781 c0-7.235-2.669-12.333-6.8-12.988c-0.052-0.008-0.104-0.012-0.157-0.012h-40c-0.481,0-0.893,0.343-0.982,0.816l-0.001,0 c-0.02,0.107-0.472,2.648,1.243,4.714c1.138,1.371,2.92,2.169,5.292,2.395c-0.357,1.59-0.552,3.31-0.552,5.075 c0,7.29,3.075,13,7,13h21v12.967c0,1.672,1.36,3.033,3.033,3.033h1.935c1.308,0,2.415-0.837,2.84-2h10.193v2.912 c0,1.703,1.385,3.088,3.088,3.088h1.823c1.703,0,3.088-1.385,3.088-3.088V35.114C60.051,33.411,58.666,32.026,56.963,32.026z"/>
-            </svg>
-            <h3>Caméras de surveillance</h3>
-            <div class="mini-line"></div>
-            <p>Installation de systèmes de vidéosurveillance intelligents</p>
-          </article>
-          <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 11 6.5 6.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11h1a1 1 0 0 1 1 1v6h-2v2h-3v-2H8v2H5v-2H3v-6a1 1 0 0 1 1-1h1zm3.2-4-1.1 4h9.8l-1.1-4H8.2zM6.5 15.5A1.5 1.5 0 1 0 6.5 12.5a1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg><h3>Diagnostic automobile</h3><div class="mini-line"></div><p>Diagnostic électronique et maintenance automobile</p></article>
-          <article class="service-card">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 2V22M12 18L15 21M12 18L9 21M15 3L12 6L9 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M3.34 7 6.8 9M6.8 9 17.2 15M6.8 9 5.7 4.9M6.8 9 2.7 10.1M17.2 15 20.66 17M17.2 15 21.29 13.9M17.2 15 18.29 19.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M20.66 7 17.2 9M17.2 9 6.8 15M17.2 9 18.29 4.9M17.2 9 21.29 10.1M6.8 15 3.34 17M6.8 15 2.7 13.9M6.8 15 5.7 19.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <h3>Climatisation</h3>
-            <div class="mini-line"></div>
-            <p>Installation, entretien et réparation de climatiseurs</p>
+          <a class="service-card-link" href="electricite.html" aria-label="Découvrir le service Électricité">
+            <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg><h3>Électricité</h3><div class="mini-line"></div><p>Installation, maintenance et dépannage électrique</p></article>
+          </a>
+          <a class="service-card-link" href="mecanique-specialisee.html" aria-label="Découvrir le service Mécanique">
+            <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.43 12.98c.04-.32.07-.65.07-.98s-.02-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.6-.22l-2.49 1a7.3 7.3 0 0 0-1.69-.98L14.5 2.4A.5.5 0 0 0 14 2h-4a.5.5 0 0 0-.5.4L9.12 5.07c-.61.24-1.18.56-1.69.98l-2.49-1a.5.5 0 0 0-.6.22l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.32-.07.65-.07.98s.02.66.07.98l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46c.14.24.43.34.68.22l2.49-1c.51.4 1.08.73 1.69.98l.38 2.67c.04.25.25.43.5.43h4c.25 0 .46-.18.5-.43l.38-2.67c.61-.25 1.18-.58 1.69-.98l2.49 1c.25.12.54.02.68-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5z"/></svg><h3>Mécanique</h3><div class="mini-line"></div><p>Maintenance de groupes électrogènes et équipements industriels</p></article>
+          </a>
+          <a class="service-card-link" href="solaire.html" aria-label="Découvrir le service Système solaire photovoltaïque">
+            <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 13h16l-2 8H2l2-8zm2-9h3v3H6V4zm5 0h3v3h-3V4zm5 0h3v3h-3V4zM5 8h4v3H4.3L5 8zm6 0h3v3h-3V8zm5 0h3l.7 3H16V8z"/></svg><h3>Système solaire photovoltaïque</h3><div class="mini-line"></div><p>Étude, installation et maintenance de systèmes solaires</p></article>
+          </a>
+          <a class="service-card-link" href="telecommunications.html" aria-label="Découvrir le service Informatique et réseau">
+            <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v10H4V5zm2 12h12v2H6v-2zm5-2h2v2h-2v-2zM7 21h10v1H7v-1z"/></svg><h3>Informatique et réseau</h3><div class="mini-line"></div><p>Installation, configuration et maintenance de réseaux</p></article>
+          </a>
+          <a class="service-card-link" href="securite-electricite.html" aria-label="Découvrir le service Caméras de surveillance">
+            <article class="service-card">
+              <svg viewBox="0 0 60.051 60.051" fill="currentColor" aria-hidden="true">
+                <path d="M56.963,32.026H55.14c-1.703,0-3.088,1.385-3.088,3.088v3.912h-10v-6.219c3.646-1.177,5.957-6.052,5.957-12.781 c0-7.235-2.669-12.333-6.8-12.988c-0.052-0.008-0.104-0.012-0.157-0.012h-40c-0.481,0-0.893,0.343-0.982,0.816l-0.001,0 c-0.02,0.107-0.472,2.648,1.243,4.714c1.138,1.371,2.92,2.169,5.292,2.395c-0.357,1.59-0.552,3.31-0.552,5.075 c0,7.29,3.075,13,7,13h21v12.967c0,1.672,1.36,3.033,3.033,3.033h1.935c1.308,0,2.415-0.837,2.84-2h10.193v2.912 c0,1.703,1.385,3.088,3.088,3.088h1.823c1.703,0,3.088-1.385,3.088-3.088V35.114C60.051,33.411,58.666,32.026,56.963,32.026z"/>
+              </svg>
+              <h3>Caméras de surveillance</h3>
+              <div class="mini-line"></div>
+              <p>Installation de systèmes de vidéosurveillance intelligents</p>
+            </article>
+          </a>
+          <a class="service-card-link" href="gestion-flottes.html" aria-label="Découvrir le service Diagnostic automobile">
+            <article class="service-card"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 11 6.5 6.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11h1a1 1 0 0 1 1 1v6h-2v2h-3v-2H8v2H5v-2H3v-6a1 1 0 0 1 1-1h1zm3.2-4-1.1 4h9.8l-1.1-4H8.2zM6.5 15.5A1.5 1.5 0 1 0 6.5 12.5a1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg><h3>Diagnostic automobile</h3><div class="mini-line"></div><p>Diagnostic électronique et maintenance automobile</p></article>
+          </a>
+          <a class="service-card-link" href="services-institutionnels.html" aria-label="Découvrir le service Climatisation">
+            <article class="service-card">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2V22M12 18L15 21M12 18L9 21M15 3L12 6L9 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M3.34 7 6.8 9M6.8 9 17.2 15M6.8 9 5.7 4.9M6.8 9 2.7 10.1M17.2 15 20.66 17M17.2 15 21.29 13.9M17.2 15 18.29 19.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20.66 7 17.2 9M17.2 9 6.8 15M17.2 9 18.29 4.9M17.2 9 21.29 10.1M6.8 15 3.34 17M6.8 15 2.7 13.9M6.8 15 5.7 19.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <h3>Climatisation</h3>
+              <div class="mini-line"></div>
+              <p>Installation, entretien et réparation de climatiseurs</p>
+            </article>
+          </a>
           </article>
         </div>
       </div>
@@ -535,14 +564,14 @@
   </footer>
 
   <nav class="mobile-bottom-nav">
-    <a href="#" class="active" aria-label="Accueil">
+    <a href="index.html" class="active" aria-label="Accueil">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <span>Accueil</span>
     </a>
-    <a href="#expertise" aria-label="Services">
+    <a href="services.html" aria-label="Services">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M12 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -559,7 +588,7 @@
       </svg>
       <span>Produits</span>
     </a>
-    <a href="#apropos" aria-label="À propos">
+    <a href="about.html" aria-label="À propos">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
         <path d="M12 16v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -567,7 +596,7 @@
       </svg>
       <span>À propos</span>
     </a>
-    <a href="#contact" aria-label="Contact">
+    <a href="contact.html" aria-label="Contact">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
         <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services Techniques - Industrial Power Solution Haiti</title>
+  <meta name="description" content="Électricité, génératrices, solaire, télécoms, sécurité électronique, facility management, mécanique et gestion de flottes en Haïti." />
+  <style>
+
+    :root{
+      --navy:#002B5B;
+      --navy-dark:#061A33;
+      --navy-deep:#031225;
+      --orange:#F97316;
+      --orange-dark:#EA580C;
+      --white:#FFFFFF;
+      --light:#F4F6F8;
+      --border:#E5E7EB;
+      --text-dark:#111827;
+      --text-muted:#6B7280;
+      --whatsapp:#16C75A;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:var(--text-dark);background:var(--white);overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+    .topbar{height:36px;background:var(--navy-dark);color:#fff}
+    .topbar .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:13px}
+    .topbar__tagline{font-size:14px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}
+    .topbar__right{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700}
+    .topbar__item,.socials{display:flex;align-items:center;gap:8px;white-space:nowrap}
+    .topbar__item svg{color:var(--orange)}
+    .socials{gap:14px}
+    .socials a{display:inline-flex;color:#fff;transition:.2s ease}
+    .socials a:hover{color:var(--orange)}
+
+    .navbar{height:92px;background:#fff;border-bottom:1px solid var(--border);position:relative;z-index:5}
+    .navbar .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .logo,.brand{display:flex;align-items:center;gap:14px;min-width:300px}
+    .logo img,.brand img{width:82px;height:82px;object-fit:contain;flex:0 0 auto}
+    .brand-text{display:flex;flex-direction:column;justify-content:center;line-height:.92;text-transform:uppercase;letter-spacing:-.5px}
+    .brand-line{display:block;font-weight:900;font-size:30px}
+    .brand-blue{color:#002B5B}
+    .brand-orange{color:#F97316;font-size:25px}
+    .navlinks{display:flex;align-items:center;gap:38px}
+    .navlinks a{font-size:14px;font-weight:800;color:var(--navy-dark);text-transform:uppercase;position:relative;padding:12px 0}
+    .navlinks a.active::after{content:"";position:absolute;left:0;bottom:-14px;width:58px;height:4px;background:var(--orange)}
+    .navicons{display:flex;align-items:center;gap:22px;color:var(--navy-dark)}
+    .navicons a{width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;position:relative}
+    .navicons a svg{width:28px;height:28px}
+    .cart-badge{position:absolute;top:-10px;right:-10px;width:22px;height:22px;border-radius:50%;background:var(--orange);color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+
+    .btn{height:54px;padding:0 30px;border-radius:4px;font-size:14px;font-weight:900;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:12px;transition:.25s ease}
+    .btn--orange{background:var(--orange);color:#fff}
+    .btn--orange:hover{background:var(--orange-dark);transform:translateY(-2px)}
+    .btn--outline{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.85);color:#fff}
+    .btn--outline:hover{background:#fff;color:var(--navy-dark)}
+    .btn--navy{background:var(--navy);color:#fff}
+    .btn--navy:hover{background:var(--navy-dark);transform:translateY(-2px)}
+
+    .section-title{text-align:center;font-size:30px;line-height:1.2;font-weight:900;color:var(--navy-dark);text-transform:uppercase;margin-bottom:12px}
+    .section-title span{color:var(--orange)}
+    .title-line{width:64px;height:3px;background:var(--navy-dark);margin:0 auto 34px}
+    .mini-line{width:28px;height:3px;background:#F97316;margin:10px auto 12px;border-radius:999px;display:block;flex:0 0 auto}
+
+    /* Page hero (bandeau) */
+    .page-hero{position:relative;min-height:340px;background-size:cover;background-position:center right;display:flex;align-items:center;color:#fff;overflow:hidden;border-bottom:1px solid rgba(6,26,51,.12)}
+    .page-hero .container{position:relative;z-index:2;padding-top:46px;padding-bottom:46px}
+    .hero-kicker{font-size:13px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+    .page-hero h1{font-size:38px;line-height:1.04;font-weight:900;letter-spacing:-.5px;text-transform:uppercase;color:#fff;margin-bottom:14px;max-width:680px}
+    .page-hero h1 span{color:var(--orange)}
+    .page-hero p{font-size:15px;line-height:1.6;color:rgba(255,255,255,.92);max-width:560px;margin-bottom:24px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+    .hero-actions .btn{height:48px;padding:0 22px;font-size:13px}
+    .btn--whatsapp{background:var(--whatsapp);color:#fff}
+    .btn--whatsapp:hover{filter:brightness(1.07);transform:translateY(-2px)}
+    .btn--whatsapp svg{width:20px;height:20px}
+
+    /* Intro */
+    .intro{padding:56px 0 34px;background:#fff}
+    .intro-text{max-width:860px;margin:0 auto;text-align:center;font-size:16px;line-height:1.8;color:#374151}
+    .intro-text strong{color:var(--navy-dark)}
+
+    /* Catalogue de services */
+    .catalog{padding:34px 0 64px;background:var(--light)}
+    .catalog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+    .scard{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 28px rgba(6,26,51,.08);transition:.25s ease}
+    .scard:hover{transform:translateY(-6px);border-color:var(--orange);box-shadow:0 22px 44px rgba(6,26,51,.14)}
+    .scard-img{position:relative;height:230px;overflow:hidden}
+    .scard-img img{width:100%;height:100%;object-fit:cover;transition:.35s ease}
+    .scard:hover .scard-img img{transform:scale(1.06)}
+    .scard-icon{position:absolute;left:22px;bottom:-26px;width:56px;height:56px;border-radius:10px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(6,26,51,.3);z-index:2}
+    .scard-icon svg{width:30px;height:30px}
+    .scard-body{padding:42px 24px 26px;display:flex;flex-direction:column;flex:1}
+    .scard-body h3{font-size:19px;font-weight:900;text-transform:uppercase;color:var(--navy-dark);line-height:1.2}
+    .scard-sub{font-size:13px;font-weight:800;text-transform:uppercase;color:var(--orange);margin-top:4px}
+    .scard .mini-line{margin:12px 0}
+    .scard-body p{font-size:14px;line-height:1.65;color:#374151;margin-bottom:20px}
+    .scard .btn{height:46px;padding:0 20px;font-size:12px;margin-top:auto;align-self:flex-start}
+
+    /* Pourquoi IPS */
+    .why{padding:56px 0;background:#fff}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .why-item{border:1px solid var(--border);border-radius:8px;padding:26px 22px;box-shadow:0 8px 20px rgba(6,26,51,.04);transition:.25s ease;background:#fff}
+    .why-item:hover{transform:translateY(-4px);border-color:var(--orange);box-shadow:0 18px 35px rgba(6,26,51,.10)}
+    .why-item svg{width:40px;height:40px;color:var(--orange);margin-bottom:14px}
+    .why-item h3{font-size:15px;font-weight:900;text-transform:uppercase;color:var(--navy-dark);margin-bottom:8px}
+    .why-item p{font-size:14px;line-height:1.6;color:#374151}
+
+    /* Contrats de maintenance */
+    .contracts{padding:60px 0;background:var(--navy-deep);color:#fff}
+    .contracts .section-title{color:#fff}
+    .contracts .title-line{background:var(--orange)}
+    .contracts-intro{max-width:780px;margin:-12px auto 34px;text-align:center;font-size:15px;line-height:1.75;color:rgba(255,255,255,.85)}
+    .contract-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .contract-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:26px 18px;text-align:center;transition:.25s ease}
+    .contract-card:hover{transform:translateY(-4px);border-color:var(--orange);background:rgba(249,115,22,.08)}
+    .contract-card svg{width:34px;height:34px;color:var(--orange);margin:0 auto 12px;display:block}
+    .contract-card h3{font-size:14px;font-weight:900;text-transform:uppercase;line-height:1.3;margin-bottom:8px;color:#fff}
+    .contract-card p{font-size:13px;line-height:1.55;color:rgba(255,255,255,.78)}
+    .contracts-cta{display:flex;justify-content:center;margin-top:32px}
+
+    /* Méthodologie / processus */
+    .steps{padding:56px 0;background:var(--light)}
+    .steps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+    .step{background:#fff;border:1px solid var(--border);border-radius:8px;padding:24px 16px;text-align:center;box-shadow:0 8px 20px rgba(6,26,51,.04)}
+    .step-num{width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;font-size:18px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;border:3px solid var(--orange)}
+    .step h3{font-size:13.5px;font-weight:900;text-transform:uppercase;color:var(--navy-dark);margin-bottom:8px;line-height:1.25}
+    .step p{font-size:13px;line-height:1.55;color:#374151}
+
+    /* Aperçu (pages détail) */
+    .overview{padding:56px 0;background:#fff}
+    .overview-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+    .overview-img{width:100%;height:300px;object-fit:cover;border-radius:6px;box-shadow:0 14px 30px rgba(6,26,51,.12)}
+    .overview h2{font-size:30px;font-weight:900;text-transform:uppercase;color:var(--navy-dark);margin-bottom:12px;line-height:1.2}
+    .overview h2 span{color:var(--orange)}
+    .overview-line{width:52px;height:3px;background:var(--navy-dark);margin-bottom:24px}
+    .overview p{font-size:16px;line-height:1.8;color:#374151;margin-bottom:18px}
+
+    /* Prestations (pages détail) */
+    .offers{padding:56px 0;background:var(--light)}
+    .offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .offer{background:#fff;border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:8px;padding:20px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 8px 20px rgba(6,26,51,.04);transition:.25s ease}
+    .offer:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(6,26,51,.10)}
+    .offer svg{width:24px;height:24px;color:var(--orange);flex:0 0 24px;margin-top:2px}
+    .offer h3{font-size:14.5px;font-weight:900;text-transform:uppercase;color:var(--navy-dark);margin-bottom:5px;line-height:1.3}
+    .offer p{font-size:13.5px;line-height:1.6;color:#374151}
+
+    /* Projets représentatifs */
+    .projects{padding:56px 0;background:#fff}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .project-card{border-radius:8px;overflow:hidden;position:relative;box-shadow:0 14px 28px rgba(6,26,51,.12);background:var(--navy-dark)}
+    .project-card img{width:100%;height:220px;object-fit:cover;transition:.35s ease}
+    .project-card:hover img{transform:scale(1.06)}
+    .project-info{background:var(--navy);padding:16px 18px}
+    .project-info h3{font-size:14px;font-weight:900;color:#fff;text-transform:uppercase;margin-bottom:6px;line-height:1.3}
+    .project-info p{font-size:13px;line-height:1.55;color:rgba(255,255,255,.82)}
+
+    /* FAQ */
+    .faq{padding:56px 0;background:var(--light)}
+    .faq-list{max-width:860px;margin:0 auto}
+    .faq-list details{background:#fff;border:1px solid var(--border);border-radius:8px;margin-bottom:12px;padding:18px 22px;box-shadow:0 8px 20px rgba(6,26,51,.04)}
+    .faq-list details[open]{border-color:var(--orange)}
+    .faq-list summary{cursor:pointer;font-size:15px;font-weight:900;color:var(--navy-dark);text-transform:uppercase;list-style:none;position:relative;padding-right:34px}
+    .faq-list summary::-webkit-details-marker{display:none}
+    .faq-list summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);color:var(--orange);font-size:24px;font-weight:900;line-height:1}
+    .faq-list details[open] summary::after{content:"\2212"}
+    .faq-list details p{margin-top:12px;font-size:14.5px;line-height:1.7;color:#374151}
+
+    /* Service CTA before footer */
+    .service-cta{background:#061A33;color:#fff;padding:54px 24px;text-align:center}
+    .service-cta .cta-title{font-size:32px;font-weight:900;color:#FFFFFF;margin:0}
+    .service-cta .cta-subtitle{font-size:22px;font-weight:900;color:#F97316;margin:8px 0 16px}
+    .service-cta .cta-badges{display:flex;justify-content:center;gap:18px;margin:24px 0;flex-wrap:wrap}
+    .service-cta .badge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);padding:12px 20px;border-radius:999px;font-weight:800}
+    .service-cta .cta-text{max-width:900px;margin:0 auto 20px;color:rgba(255,255,255,0.92)}
+    .service-cta .cta-btn{display:inline-flex;align-items:center;gap:12px;background:var(--whatsapp);color:#fff;padding:14px 20px;border-radius:6px;font-weight:900;text-transform:uppercase}
+    .service-cta .cta-actions{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap}
+    .service-cta .cta-alt{display:inline-flex;align-items:center;gap:10px;border:1.5px solid rgba(255,255,255,.6);color:#fff;padding:14px 20px;border-radius:6px;font-weight:900;text-transform:uppercase;transition:.25s ease}
+    .service-cta .cta-alt:hover{background:#fff;color:var(--navy-dark)}
+
+    .footer{background:var(--navy-deep);color:#fff;padding:36px 0 18px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+    .footer h3{font-size:20px;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px}
+    .footer h4{font-size:15px;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px}
+    .footer p,.footer a{font-size:14px;line-height:1.7;color:rgba(255,255,255,.8)}
+    .footer a{display:block;margin-bottom:8px}
+    .footer a:hover{color:var(--orange)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:24px;padding-top:16px;text-align:center;font-size:13px;color:rgba(255,255,255,.7)}
+    .footer-accordion{display:none}
+    .mobile-bottom-nav{display:none}
+
+    @media (max-width:1100px){
+      .brand{min-width:245px;gap:10px}
+      .logo img,.brand img{width:70px;height:70px}
+      .brand-line{font-size:24px}
+      .brand-orange{font-size:20px}
+      .navlinks{gap:24px}
+      .contract-grid{grid-template-columns:repeat(2,1fr)}
+      .steps-grid{grid-template-columns:repeat(3,1fr)}
+      .offers-grid{grid-template-columns:repeat(2,1fr)}
+      .why-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width:768px){
+      body{padding-bottom:82px;overflow-x:hidden}
+      .container{width:100%;padding-left:20px;padding-right:20px}
+      header .topbar,.topbar{display:none !important;height:0 !important;padding:0 !important;margin:0 !important;overflow:hidden !important}
+
+      .navlinks{display:none !important}
+      .navicons{display:none !important}
+      .navbar{height:96px;padding:10px 0;background:#fff}
+      .navbar .container{height:100%;display:flex;align-items:center;justify-content:center}
+      .logo,.brand{justify-content:center;min-width:auto;gap:10px}
+      .logo img,.brand img{width:58px;height:58px}
+      .brand-line{font-size:22px}
+      .brand-orange{font-size:18px}
+
+      .page-hero{min-height:320px}
+      .page-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,18,37,.96) 0%,rgba(3,18,37,.88) 50%,rgba(3,18,37,.45) 100%);z-index:1}
+      .page-hero h1{font-size:30px;line-height:1.05}
+      .page-hero p{font-size:14px;max-width:340px}
+      .hero-actions{flex-direction:column;align-items:stretch}
+      .hero-actions .btn{width:100%;max-width:330px}
+
+      .intro{padding:42px 0 26px}
+      .catalog{padding:26px 0 48px}
+      .catalog-grid{grid-template-columns:1fr;gap:20px}
+      .scard-img{height:200px}
+
+      .why{padding:44px 0}
+      .why-grid{grid-template-columns:1fr;gap:16px}
+
+      .contracts{padding:48px 0}
+      .contract-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+
+      .steps{padding:44px 0}
+      .steps-grid{grid-template-columns:1fr;gap:14px}
+
+      .overview{padding:44px 0}
+      .overview-grid{grid-template-columns:1fr;gap:24px}
+      .overview-img{height:230px}
+      .overview h2,.overview p{text-align:center}
+      .overview-line{margin-left:auto;margin-right:auto}
+
+      .offers{padding:44px 0}
+      .offers-grid{grid-template-columns:1fr;gap:14px}
+
+      .projects{padding:44px 0}
+      .projects-grid{grid-template-columns:1fr;gap:16px}
+
+      .faq{padding:44px 0}
+
+      .service-cta{padding:46px 20px}
+      .service-cta .cta-title{font-size:26px}
+      .service-cta .cta-subtitle{font-size:18px}
+      .service-cta .cta-badges{flex-direction:column;align-items:center}
+      .service-cta .badge{width:220px}
+      .service-cta .cta-btn,.service-cta .cta-alt{width:100%;max-width:320px;justify-content:center}
+
+      .footer-grid{display:none}
+      .footer-accordion{display:block}
+      .footer-accordion details{border-bottom:1px solid rgba(255,255,255,.14);padding:16px 0}
+      .footer-accordion summary{cursor:pointer;font-size:15px;font-weight:900;text-transform:uppercase;color:#fff}
+      .footer-accordion p,.footer-accordion a{margin-top:12px;font-size:14px;color:rgba(255,255,255,.78)}
+      .footer-bottom{padding-bottom:20px}
+
+      .mobile-bottom-nav{position:fixed;left:0;right:0;bottom:0;height:74px;background:#061A33;display:flex;align-items:center;justify-content:space-around;z-index:9999;box-shadow:0 -12px 30px rgba(0,0,0,.25)}
+      .mobile-bottom-nav a{width:20%;height:100%;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11px;font-weight:800}
+      .mobile-bottom-nav a svg{width:23px;height:23px}
+      .mobile-bottom-nav a.active{color:#F97316}
+    }
+
+    @media (max-width:520px){
+      .contract-grid{grid-template-columns:1fr}
+      .page-hero h1{font-size:27px}
+      .section-title,.overview h2{font-size:25px}
+      .brand-blue{font-size:20px}
+      .brand-orange{font-size:17px}
+    }
+
+    @media (min-width:769px){
+      .footer-accordion{display:none}
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar__tagline">EXPERTISE – QUALITÉ – SÉCURITÉ – PERFORMANCE</div>
+        <div class="topbar__right">
+          <div class="topbar__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19 19.5 19.5 0 0 1 5 12.81 19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L8 9.67a16 16 0 0 0 6.33 6.33l1.23-1.23a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>+509 5666 9084</div>
+          <div class="topbar__item topbar__email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>industrialpowersolutionhaiti@gmail.com</div>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.2l.8-4h-4V9c0-.7.3-1 1-1z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.34 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.51 2 12.04 2zm5.77 14.18c-.24.68-1.41 1.3-1.96 1.35-.5.05-1.12.07-1.8-.11-.42-.13-.95-.31-1.63-.61-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.31.38-.43.5-.14.14-.29.29-.12.57.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.45.29.14.45.12.62-.07.19-.22.72-.84.91-1.12.19-.29.38-.24.64-.14.26.1 1.67.79 1.96.93.29.14.48.22.55.34.07.12.07.72-.17 1.39z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="container">
+        <a class="logo brand" href="index.html">
+          <img src="assets/logo2.png" alt="Industrial Power Solution Haiti">
+          <span class="brand-text">
+            <span class="brand-line brand-blue">INDUSTRIAL</span>
+            <span class="brand-line brand-orange">POWER SOLUTION</span>
+            <span class="brand-line brand-blue">HAITI</span>
+          </span>
+        </a>
+        <div class="navlinks">
+          <a href="index.html">Accueil</a><a class="active" href="services.html">Services</a><a href="product.html">Produits</a><a href="about.html">À propos</a><a href="contact.html">Contact</a>
+        </div>
+        <div class="navicons">
+          <a href="#" aria-label="Recherche"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2.2"/><path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Compte"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2.2"/></svg></a>
+          <a href="#" aria-label="Panier"><span class="cart-badge">0</span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2.2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2.2"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  <section class="page-hero" style="background-image:linear-gradient(90deg,rgba(3,18,37,.94) 0%,rgba(3,18,37,.78) 40%,rgba(3,18,37,.30) 72%,rgba(3,18,37,.12) 100%),url('assets/services-hero.jpg');">
+    <div class="container">
+      <div class="hero-kicker">Nos services</div>
+      <h1>DES SOLUTIONS TECHNIQUES <span>COMPLÈTES</span> POUR VOS OPÉRATIONS</h1>
+      <p>Électricité, énergie, solaire, télécommunications, sécurité et mécanique : un partenaire unique pour concevoir, installer et maintenir vos infrastructures critiques.</p>
+      <div class="hero-actions">
+        <a class="btn btn--orange" href="#catalogue">Découvrir nos services <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn--whatsapp" href="https://wa.me/50956669084?text=Bonjour%20Industrial%20Power%20Solution%20Haiti%2C%20j'ai%20besoin%20d'un%20service.%20Pouvez-vous%20m'aider%20%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.34 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.51 2 12.04 2zm5.77 14.18c-.24.68-1.41 1.3-1.96 1.35-.5.05-1.12.07-1.8-.11-.42-.13-.95-.31-1.63-.61-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.31.38-.43.5-.14.14-.29.29-.12.57.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.45.29.14.45.12.62-.07.19-.22.72-.84.91-1.12.19-.29.38-.24.64-.14.26.1 1.67.79 1.96.93.29.14.48.22.55.34.07.12.07.72-.17 1.39z"/></svg> Demander un devis</a>
+      </div>
+    </div>
+  </section>
+
+    <section class="intro">
+      <div class="container">
+        <h2 class="section-title">Votre partenaire <span>technique</span> de confiance</h2><div class="title-line"></div>
+        <p class="intro-text"><strong>Industrial Power Solution Haiti</strong> accompagne les entreprises, ONG, banques, hôtels, hôpitaux, universités, industries et institutions publiques dans la conception, l’installation et la maintenance de leurs infrastructures techniques. Notre mission : garantir la continuité de vos opérations grâce à des solutions fiables, conformes et durables — portées par des équipes certifiées et disponibles 24/7.</p>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalogue">
+      <div class="container">
+        <h2 class="section-title">Notre catalogue <span>de services</span></h2><div class="title-line"></div>
+        <div class="catalog-grid">
+        <article class="scard">
+          <div class="scard-img"><img src="assets/svc-electricite.jpg" alt="Services Électriques" loading="lazy"><div class="scard-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div></div>
+          <div class="scard-body">
+            <h3>Services Électriques</h3>
+            <div class="scard-sub">Installations & maintenance</div>
+            <div class="mini-line"></div>
+            <p>Installations électriques industrielles, commerciales et institutionnelles, maintenance, audits et mise en conformité.</p>
+            <a class="btn btn--navy" href="electricite.html">En savoir plus <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+        <article class="scard">
+          <div class="scard-img"><img src="assets/svc-generatrices.jpg" alt="Génératrices & Production d’Énergie" loading="lazy"><div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="15" height="11" rx="2"/><path d="M6 7V4h7v3M19 10v6M17 13h5M6 18v3M13 18v3" stroke-linecap="round"/></svg></div></div>
+          <div class="scard-body">
+            <h3>Génératrices & Production d’Énergie</h3>
+            <div class="scard-sub">Installation & maintenance</div>
+            <div class="mini-line"></div>
+            <p>Installation, mise en service, maintenance, réparations d’urgence et gestion complète de vos groupes électrogènes.</p>
+            <a class="btn btn--navy" href="generatrices.html">En savoir plus <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+        <article class="scard">
+          <div class="scard-img"><img src="assets/svc-solaire.jpg" alt="Énergie Solaire" loading="lazy"><div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round"/></svg></div></div>
+          <div class="scard-body">
+            <h3>Énergie Solaire</h3>
+            <div class="scard-sub">Études & installations photovoltaïques</div>
+            <div class="mini-line"></div>
+            <p>Études de faisabilité, conception photovoltaïque, installation de panneaux, batteries lithium et optimisation énergétique.</p>
+            <a class="btn btn--navy" href="solaire.html">En savoir plus <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+        <article class="scard">
+          <div class="scard-img"><img src="assets/svc-telecom.jpg" alt="Télécommunications" loading="lazy"><div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="9" r="3"/><path d="M12 12v9M8 21h8" stroke-linecap="round"/><path d="M5.6 3.6a8 8 0 0 0 0 10.8M18.4 3.6a8 8 0 0 1 0 10.8" stroke-linecap="round"/></svg></div></div>
+          <div class="scard-body">
+            <h3>Télécommunications</h3>
+            <div class="scard-sub">Fibre optique & infrastructures</div>
+            <div class="mini-line"></div>
+            <p>Fibre optique, soudure, tests OTDR, câblage structuré, infrastructures télécom et installation Starlink.</p>
+            <a class="btn btn--navy" href="telecommunications.html">En savoir plus <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+        <article class="scard">
+          <div class="scard-img"><img src="assets/svc-securite.jpg" alt="Sécurité Électronique" loading="lazy"><div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="13" height="10" rx="2"/><path d="m15 10 7-3v10l-7-3" stroke-linejoin="round"/></svg></div></div>
+          <div class="scard-body">
+            <h3>Sécurité Électronique</h3>
+            <div class="scard-sub">CCTV, accès & détection</div>
+            <div class="mini-line"></div>
+            <p>Vidéosurveillance, contrôle d’accès, biométrie, alarmes anti-intrusion, détection incendie et télésurveillance.</p>
+            <a class="btn btn--navy" href="securite-electricite.html">En savoir plus <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+        <article class="scard">
+          <div class="scard-img"><img src="assets/svc-institutionnels.jpg" alt="Services Techniques Institutionnels" loading="lazy"><div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 21v-4h6v4M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2" stroke-linecap="round"/></svg></div></div>
+          <div class="scard-body">
+            <h3>Services Techniques Institutionnels</h3>
+            <div class="scard-sub">Facility management & 24/7</div>
+            <div class="mini-line"></div>
+            <p>Facility management, gestion technique de bâtiments, infrastructures critiques, maintenance externalisée et support 24/7.</p>
+            <a class="btn btn--navy" href="services-institutionnels.html">En savoir plus <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+        <article class="scard">
+          <div class="scard-img"><img src="assets/svc-mecanique.jpg" alt="Mécanique Spécialisée" loading="lazy"><div class="scard-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.43 12.98c.04-.32.07-.65.07-.98s-.02-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.6-.22l-2.49 1a7.3 7.3 0 0 0-1.69-.98L14.5 2.4A.5.5 0 0 0 14 2h-4a.5.5 0 0 0-.5.4L9.12 5.07c-.61.24-1.18.56-1.69.98l-2.49-1a.5.5 0 0 0-.6.22l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.32-.07.65-.07.98s.02.66.07.98l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46c.14.24.43.34.68.22l2.49-1c.51.4 1.08.73 1.69.98l.38 2.67c.04.25.25.43.5.43h4c.25 0 .46-.18.5-.43l.38-2.67c.61-.25 1.18-.58 1.69-.98l2.49 1c.25.12.54.02.68-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5z"/></svg></div></div>
+          <div class="scard-body">
+            <h3>Mécanique Spécialisée</h3>
+            <div class="scard-sub">Moteurs diesel & génératrices</div>
+            <div class="mini-line"></div>
+            <p>Maintenance et réparation de génératrices, révision de moteurs diesel, diagnostics et maintenance préventive.</p>
+            <a class="btn btn--navy" href="mecanique-specialisee.html">En savoir plus <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+        <article class="scard">
+          <div class="scard-img"><img src="assets/svc-flottes.jpg" alt="Gestion de Flottes" loading="lazy"><div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5h14v11H1z" stroke-linejoin="round"/><path d="M15 9h4l4 4v3h-8z" stroke-linejoin="round"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div></div>
+          <div class="scard-body">
+            <h3>Gestion de Flottes</h3>
+            <div class="scard-sub">Maintenance & suivi de véhicules</div>
+            <div class="mini-line"></div>
+            <p>Maintenance préventive et corrective, gestion de flottes de véhicules, suivi et optimisation des coûts opérationnels.</p>
+            <a class="btn btn--navy" href="gestion-flottes.html">En savoir plus <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="container">
+        <h2 class="section-title">Pourquoi choisir <span>IPS Haiti</span></h2><div class="title-line"></div>
+        <div class="why-grid">
+        <div class="why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3 20 6.5V12c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6.5L12 3Z" stroke-linejoin="round"/><path d="m8.7 12.1 2.3 2.3 4.6-4.8" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Expertise multidisciplinaire</h3><p>Électricité, énergie, solaire, télécoms, sécurité et mécanique : une seule équipe pour tous vos besoins techniques.</p></div>
+        <div class="why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Disponibilité 24/7</h3><p>Une permanence technique répond à vos urgences jour et nuit, toute l’année.</p></div>
+        <div class="why-item"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V20h14v-3.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V20h6v-3.5c0-2.33-4.67-3.5-7-3.5z"/></svg><h3>Personnel certifié</h3><p>Ingénieurs et techniciens formés et certifiés, encadrés par des procédures rigoureuses.</p></div>
+        <div class="why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4L15 12l-3-3 2.7-2.7z" stroke-linejoin="round"/></svg><h3>Équipements professionnels</h3><p>Instruments de mesure, outillage et véhicules d’intervention de niveau international.</p></div>
+        <div class="why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-linejoin="round"/><path d="M14 2v6h6M9 13h6M9 17h6" stroke-linecap="round"/></svg><h3>Approche contractuelle</h3><p>Devis clairs, contrats documentés, rapports d’intervention et indicateurs de performance.</p></div>
+        <div class="why-item"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15 8l6 .9-4.5 4.3 1.1 6.1L12 16.3 6.4 19.3l1.1-6.1L3 8.9 9 8l3-6z"/></svg><h3>Partenaire des institutions</h3><p>Banques, ONG, hôtels, hôpitaux, universités et industries nous confient leurs infrastructures critiques.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contracts" id="contrats">
+      <div class="container">
+        <h2 class="section-title">Contrats de <span>maintenance</span></h2><div class="title-line"></div>
+        <p class="contracts-intro">La panne la moins chère est celle qui n’arrive jamais. Nos contrats de maintenance garantissent la disponibilité de vos équipements, des interventions prioritaires et une visibilité totale sur l’état de vos installations.</p>
+        <div class="contract-grid">
+        <div class="contract-card"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg><h3>Maintenance Électrique</h3><p>Visites planifiées, contrôles thermographiques et interventions prioritaires.</p></div>
+        <div class="contract-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="15" height="11" rx="2"/><path d="M6 7V4h7v3M19 10v6M17 13h5M6 18v3M13 18v3" stroke-linecap="round"/></svg><h3>Maintenance Génératrices</h3><p>Entretiens constructeur, tests en charge et disponibilité garantie.</p></div>
+        <div class="contract-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round"/></svg><h3>Maintenance Solaire</h3><p>Inspections, nettoyage et suivi de performance de vos installations.</p></div>
+        <div class="contract-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="9" r="3"/><path d="M12 12v9M8 21h8" stroke-linecap="round"/><path d="M5.6 3.6a8 8 0 0 0 0 10.8M18.4 3.6a8 8 0 0 1 0 10.8" stroke-linecap="round"/></svg><h3>Maintenance Télécom</h3><p>Supervision de vos liens critiques et dépannage prioritaire.</p></div>
+        <div class="contract-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="13" height="10" rx="2"/><path d="m15 10 7-3v10l-7-3" stroke-linejoin="round"/></svg><h3>Maintenance Sécurité</h3><p>Tests réguliers de vos systèmes CCTV, accès, intrusion et incendie.</p></div>
+        <div class="contract-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 21v-4h6v4M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2" stroke-linecap="round"/></svg><h3>Facility Management</h3><p>Gestion globale de vos services techniques sous contrat unique.</p></div>
+        <div class="contract-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-linejoin="round"/><path d="M14 2v6h6M9 13h6M9 17h6" stroke-linecap="round"/></svg><h3>Gestion Technique Complète</h3><p>Tous vos équipements, un seul partenaire : la formule la plus complète.</p></div>
+        </div>
+        <div class="contracts-cta">
+          <a class="btn btn--orange" href="https://wa.me/50956669084?text=Bonjour%20IPS%20Haiti%2C%20j'aimerais%20des%20informations%20sur%20vos%20contrats%20de%20maintenance." target="_blank" rel="noopener">Discuter d’un contrat <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="m13 5 7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps">
+      <div class="container">
+        <h2 class="section-title">Notre méthode <span>de travail</span></h2><div class="title-line"></div>
+        <div class="steps-grid">
+        <div class="step"><div class="step-num">1</div><h3>Prise de contact</h3><p>Vous nous décrivez votre besoin par téléphone, WhatsApp ou e-mail. Nous vous répondons rapidement.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Visite technique & audit</h3><p>Nos ingénieurs évaluent vos installations sur site et identifient les besoins réels.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Proposition & devis</h3><p>Vous recevez une proposition claire et détaillée : solutions, délais et budget.</p></div>
+        <div class="step"><div class="step-num">4</div><h3>Exécution des travaux</h3><p>Nos techniciens certifiés réalisent les travaux selon les normes, avec un suivi rigoureux.</p></div>
+        <div class="step"><div class="step-num">5</div><h3>Suivi & maintenance</h3><p>Nous assurons la réception, la formation et un accompagnement durable de vos équipes.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="service-cta">
+    <div class="container">
+      <h2 class="cta-title">BESOIN D’UN SERVICE ?</h2>
+      <div class="cta-subtitle">NOUS SOMMES LÀ POUR VOUS !</div>
+      <div class="cta-badges">
+        <div class="badge">Rapidité</div>
+        <div class="badge">Qualité</div>
+        <div class="badge">Fiabilité</div>
+      </div>
+      <p class="cta-text">Intervention technique, maintenance, installation et accompagnement selon vos besoins. Décrivez-nous votre projet : nous vous répondons rapidement.</p>
+      <div class="cta-actions">
+        <a class="cta-btn" href="https://wa.me/50956669084?text=Bonjour%20Industrial%20Power%20Solution%20Haiti%2C%20j'ai%20besoin%20d'un%20service.%20Pouvez-vous%20m'aider%20%3F" target="_blank" rel="noopener">CONTACTEZ-NOUS SUR WHATSAPP</a>
+        <a class="cta-alt" href="tel:+50956669084">+509 5666 9084</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>Industrial Power Solution Haiti</h3><p>Expertise au service de votre performance industrielle. Solutions électriques, mécaniques, solaires et techniques pour entreprises, institutions et industries.</p></div>
+        <div><h4>Navigation</h4><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="product.html">Produits</a><a href="about.html">À propos</a><a href="contact.html">Contact</a></div>
+        <div><h4>Contact</h4><p>+509 5666 9084<br>+509 5666 9085<br>+509 5666 9086<br>industrialpowersolutionhaiti@gmail.com<br>www.ips-haiti.com<br>P16, Village Ekam, Caracol, Haïti</p></div>
+      </div>
+      <div class="footer-accordion" aria-label="Liens rapides du footer">
+        <details open>
+          <summary>Industrial Power Solution Haiti</summary>
+          <p>Expertise au service de votre performance industrielle. Solutions électriques, mécaniques, solaires et techniques pour entreprises, institutions et industries.</p>
+        </details>
+        <details>
+          <summary>Navigation</summary>
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="product.html">Produits</a>
+          <a href="about.html">À propos</a>
+          <a href="contact.html">Contact</a>
+        </details>
+        <details>
+          <summary>Contact</summary>
+          <p>+509 5666 9084<br>+509 5666 9085<br>+509 5666 9086<br>industrialpowersolutionhaiti@gmail.com<br>www.ips-haiti.com<br>P16, Village Ekam, Caracol, Haïti</p>
+        </details>
+      </div>
+      <div class="footer-bottom">© 2026 Industrial Power Solution Haiti. Tous droits réservés.</div>
+    </div>
+  </footer>
+
+  <nav class="mobile-bottom-nav">
+    <a href="index.html" aria-label="Accueil">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Accueil</span>
+    </a>
+    <a href="services.html" class="active" aria-label="Services">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 13a18.15 18.15 0 0 1-20 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect width="20" height="14" x="2" y="6" rx="2" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span>Services</span>
+    </a>
+    <a href="product.html" aria-label="Produits">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Produits</span>
+    </a>
+    <a href="about.html" aria-label="À propos">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <path d="M12 16v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>À propos</span>
+    </a>
+    <a href="contact.html" aria-label="Contact">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+        <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+</body>
+</html>
