@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contactez IPS Haiti pour vos besoins industriels, énergétiques, techniques et de maintenance." />
+  <title>Contact | Industrial Power Solution Haiti</title>
+  <style>
+    :root{
+      --navy:#002B5B;
+      --navy-dark:#061A33;
+      --navy-deep:#031225;
+      --orange:#F97316;
+      --orange-dark:#EA580C;
+      --white:#FFFFFF;
+      --light:#F4F6F8;
+      --border:#E5E7EB;
+      --text-dark:#111827;
+      --text-muted:#6B7280;
+      --whatsapp:#16C75A;
+      --hero-shift: clamp(-400px, -19.3vw, -40px);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:var(--text-dark);background:var(--white)}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+    .topbar{height:36px;background:var(--navy-dark);color:#fff}
+    .topbar .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:13px}
+    .topbar__tagline{font-size:14px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}
+    .topbar__right{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700}
+    .topbar__item,.socials{display:flex;align-items:center;gap:8px;white-space:nowrap}
+    .topbar__item svg{color:var(--orange)}
+    .socials{gap:14px}
+    .socials a{display:inline-flex;color:#fff;transition:.2s ease}
+    .socials a:hover{color:var(--orange)}
+
+    .navbar{height:92px;background:#fff;border-bottom:1px solid var(--border);position:relative;z-index:5}
+    .navbar .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:28px}
+
+    .logo,
+    .brand {display:flex;align-items:center;gap:14px;min-width:300px}
+
+    .logo img,
+    .brand img{width:82px;height:82px;object-fit:contain;flex:0 0 auto}
+
+    .brand-text{display:flex;flex-direction:column;justify-content:center;line-height:0.92;text-transform:uppercase;letter-spacing:-0.5px}
+    .brand-line{display:block;font-weight:900;font-size:30px}
+    .brand-blue{color:#002B5B}
+    .brand-orange{color:#F97316;font-size:25px}
+
+    .navlinks{display:flex;align-items:center;gap:38px}
+    .navlinks a{font-size:14px;font-weight:800;color:var(--navy-dark);text-transform:uppercase;position:relative;padding:12px 0}
+    .navlinks a.active::after{content:"";position:absolute;left:0;bottom:-14px;width:58px;height:4px;background:var(--orange)}
+    .navicons{display:flex;align-items:center;gap:22px;color:var(--navy-dark)}
+    .navicons a{width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;position:relative}
+    .navicons a svg{width:28px;height:28px}
+    .cart-badge{position:absolute;top:-10px;right:-10px;width:22px;height:22px;border-radius:50%;background:var(--orange);color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+
+    .hero{min-height:420px;background-image:linear-gradient(90deg,rgba(3,18,37,.94) 0%,rgba(3,18,37,.82) 38%,rgba(3,18,37,.45) 68%,rgba(3,18,37,.14) 100%),url("assets/tecnicien.png");background-size:cover;background-position:center right;display:flex;align-items:center;position:relative;overflow:hidden}
+    .hero .container{max-width:1180px;margin:0 auto;padding:56px 24px 64px}
+    .hero__content{max-width:640px;color:#fff}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:1.2px;font-size:12px;font-weight:900;color:#F8CDAB}
+    .hero-title{font-size:42px;line-height:1.02;font-weight:900;letter-spacing:-1px;text-transform:uppercase;color:#fff;margin:12px 0 18px}
+    .hero-title span{color:var(--orange)}
+    .hero-description{max-width:560px;font-size:16px;line-height:1.65;color:rgba(255,255,255,.92);margin-bottom:24px}
+    .hero-buttons{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .btn{height:52px;padding:0 24px;border-radius:4px;font-size:14px;font-weight:900;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:.25s ease}
+    .btn--orange{background:var(--orange);color:#fff}
+    .btn--orange:hover{background:var(--orange-dark);transform:translateY(-2px)}
+    .btn--outline{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.85);color:#fff}
+    .btn--outline:hover{background:#fff;color:var(--navy-dark)}
+    .btn--navy{background:var(--navy);color:#fff}
+    .btn--navy:hover{background:var(--navy-dark);transform:translateY(-2px)}
+
+    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;padding:48px 0 24px}
+    .panel{background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 18px 35px rgba(6,26,51,.08)}
+    .panel--form{padding:28px}
+    .panel--info{padding:28px;background:linear-gradient(180deg,#F8FAFC 0%,#FFFFFF 100%)}
+
+    .section-tag{text-transform:uppercase;letter-spacing:1.2px;font-size:12px;font-weight:900;color:var(--orange)}
+    .panel h2,.panel h3{color:var(--navy-dark);font-weight:900;text-transform:uppercase;line-height:1.15}
+    .panel h2{font-size:28px;margin:8px 0 12px}
+    .panel h3{font-size:18px;margin-bottom:10px}
+    .panel p{color:#374151;font-size:15px;line-height:1.7}
+
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .field.full{grid-column:1 / -1}
+    .field label{font-size:13px;font-weight:800;color:var(--navy-dark);text-transform:uppercase;letter-spacing:.4px}
+    .field input,
+    .field select,
+    .field textarea{width:100%;border:1px solid var(--border);border-radius:6px;background:#fff;color:var(--text-dark);padding:12px 14px;font:inherit;font-size:14px}
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(249,115,22,.12)}
+    .field textarea{min-height:120px;resize:vertical}
+    .form-note{font-size:13px;color:var(--text-muted);margin-top:10px}
+
+    .contact-list{display:grid;gap:14px;margin-top:18px}
+    .contact-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 10px 18px rgba(6,26,51,.04)}
+    .contact-card-icon{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:rgba(249,115,22,.12);color:var(--orange);flex:0 0 44px}
+    .contact-card strong{display:block;font-size:14px;text-transform:uppercase;color:var(--navy-dark);margin-bottom:4px}
+    .contact-card p,.contact-card a{font-size:14px;line-height:1.6;color:#374151}
+    .contact-card a:hover{color:var(--orange)}
+
+    .whatsapp-cta{padding:18px 0 18px}
+    .whatsapp-box{background:linear-gradient(135deg,#061A33 0%,#002B5B 100%);border-radius:12px;color:#fff;padding:24px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:24px;box-shadow:0 18px 36px rgba(6,26,51,.14)}
+    .whatsapp-box h2{font-size:28px;line-height:1.1;text-transform:uppercase;color:#fff;margin:8px 0 12px}
+    .whatsapp-box p{color:rgba(255,255,255,.88)}
+    .whatsapp-icon{width:62px;height:62px;border-radius:18px;background:rgba(255,255,255,.12);display:grid;place-items:center;color:#fff}
+    .whatsapp-icon svg{width:32px;height:32px}
+    .whatsapp-cta .btn{height:48px}
+    .btn--whatsapp{background:var(--whatsapp);color:#fff}
+    .btn--whatsapp:hover{background:#12A84F;transform:translateY(-2px)}
+
+    .phone-section{padding:6px 0 42px}
+    .phone-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+    .phone-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;box-shadow:0 14px 28px rgba(6,26,51,.08)}
+    .phone-card h3{font-size:15px;text-transform:uppercase;color:var(--navy-dark);margin-bottom:8px}
+    .phone-card a{display:inline-flex;align-items:center;gap:10px;font-size:24px;font-weight:900;color:var(--orange);line-height:1.2}
+    .phone-card span{display:block;font-size:13px;color:#374151;margin-top:6px}
+
+    .final-cta{background:linear-gradient(180deg,#F4F6F8 0%,#FFFFFF 100%);padding:18px 0 54px}
+    .final-cta .panel{padding:24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .final-cta h2{font-size:24px;line-height:1.15;text-transform:uppercase;color:var(--navy-dark);margin:8px 0 6px}
+    .final-cta p{max-width:700px}
+    .final-cta .actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+
+    .service-cta{background:#061A33;color:#fff;padding:54px 24px;text-align:center}
+    .service-cta .cta-title{font-size:32px;font-weight:900;color:#FFFFFF;margin:0}
+    .service-cta .cta-subtitle{font-size:22px;font-weight:900;color:#F97316;margin:8px 0 16px}
+    .service-cta .cta-badges{display:flex;justify-content:center;gap:18px;margin:24px 0;flex-wrap:wrap}
+    .service-cta .badge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);padding:12px 20px;border-radius:999px;font-weight:800}
+    .service-cta .cta-text{max-width:900px;margin:0 auto 20px;color:rgba(255,255,255,.92)}
+    .service-cta .cta-btn{display:inline-flex;align-items:center;gap:12px;background:var(--whatsapp);color:#fff;padding:14px 20px;border-radius:6px;font-weight:900;text-transform:uppercase}
+
+    .footer{background:var(--navy-deep);color:#fff;padding:36px 0 18px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+    .footer h3{font-size:20px;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px}
+    .footer h4{font-size:15px;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:12px}
+    .footer p,.footer a{font-size:14px;line-height:1.7;color:rgba(255,255,255,.8)}
+    .footer a{display:block;margin-bottom:8px}
+    .footer a:hover{color:var(--orange)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:24px;padding-top:16px;text-align:center;font-size:13px;color:rgba(255,255,255,.7)}
+    .mobile-bottom-nav{display:none}
+
+    @media (max-width:1100px){
+      .contact-grid{grid-template-columns:1fr}
+      .whatsapp-box{grid-template-columns:1fr}
+      .final-cta .panel{flex-direction:column;align-items:flex-start}
+    }
+
+    @media (max-width:900px){
+      .navlinks{gap:24px}
+    }
+
+    @media (max-width:768px){
+      body{padding-bottom:82px;overflow-x:hidden}
+      .container{width:100%;padding-left:20px;padding-right:20px}
+      .topbar{height:auto;padding:8px 0}
+      .topbar .container{justify-content:center;flex-wrap:wrap;gap:8px}
+      .topbar__tagline{font-size:12px;text-align:center}
+      .topbar__right{font-size:12px;gap:14px}
+      .topbar__email{display:none}
+
+      .navlinks,.navicons{display:none}
+      .navbar{height:96px;padding:10px 0;background:#fff}
+      .navbar .container{height:100%;display:flex;align-items:center;justify-content:center}
+      .logo,.brand{justify-content:center;min-width:auto;gap:10px}
+      .logo img,.brand img{width:58px;height:58px}
+      .brand-line{font-size:22px}
+      .brand-orange{font-size:18px}
+
+      .hero{min-height:420px}
+      .hero .container{padding:36px 20px 46px}
+      .hero-title{font-size:30px;line-height:1.05}
+      .hero-description{font-size:15px;line-height:1.6}
+      .hero-buttons{flex-direction:column;align-items:flex-start}
+      .hero-buttons .btn{width:100%;max-width:320px}
+
+      .contact-grid{padding-top:26px}
+      .panel--form,.panel--info{padding:18px}
+      .form-grid{grid-template-columns:1fr}
+      .phone-grid{grid-template-columns:1fr}
+
+      .footer-grid{display:none}
+      .footer-accordion{display:block}
+      .footer-accordion details{border-bottom:1px solid rgba(255,255,255,.14);padding:16px 0}
+      .footer-accordion summary{cursor:pointer;font-size:15px;font-weight:900;text-transform:uppercase;color:#fff}
+      .footer-accordion p,
+      .footer-accordion a{margin-top:12px;font-size:14px;color:rgba(255,255,255,.78)}
+
+      .mobile-bottom-nav{position:fixed;left:0;right:0;bottom:0;height:74px;background:#061A33;display:flex;align-items:center;justify-content:space-around;z-index:9999;box-shadow:0 -12px 30px rgba(0,0,0,.25)}
+      .mobile-bottom-nav a{width:20%;height:100%;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11px;font-weight:800}
+      .mobile-bottom-nav a svg{width:23px;height:23px}
+      .mobile-bottom-nav a.active{color:#F97316}
+    }
+
+    @media (max-width:520px){
+      body{padding-bottom:82px;overflow-x:hidden}
+      .container{width:100%;padding-left:20px;padding-right:20px}
+      .hero-title{font-size:28px}
+      .phone-card a{font-size:18px}
+      .service-cta{padding:46px 20px}
+      .service-cta .cta-title{font-size:26px}
+      .service-cta .cta-subtitle{font-size:18px}
+      .service-cta .cta-badges{flex-direction:column;align-items:center}
+      .service-cta .badge{width:220px}
+      .service-cta .cta-btn{width:100%;max-width:320px;justify-content:center}
+    }
+
+    @media (min-width:769px){.footer-accordion{display:none}}
+
+    @media (max-width: 768px){
+      header .topbar,
+      .topbar {display:none !important;height:0 !important;padding:0 !important;margin:0 !important;overflow:hidden !important}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar__tagline">EXPERTISE – QUALITÉ – SÉCURITÉ – PERFORMANCE</div>
+        <div class="topbar__right">
+          <div class="topbar__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19 19.5 19.5 0 0 1 5 12.81 19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L8 9.67a16 16 0 0 0 6.33 6.33l1.23-1.23a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>+509 5666 9084</div>
+          <div class="topbar__item topbar__email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>industrialpowersolutionhaiti@gmail.com</div>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.2l.8-4h-4V9c0-.7.3-1 1-1z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.34 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.51 2 12.04 2zm5.77 14.18c-.24.68-1.41 1.3-1.96 1.35-.5.05-1.12.07-1.8-.11-.42-.13-.95-.31-1.63-.61-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.31.38-.43.5-.14.14-.29.29-.12.57.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.45.29.14.45.12.62-.07.19-.22.72-.84.91-1.12.19-.29.38-.24.64-.14.26.1 1.67.79 1.96.93.29.14.48.22.55.34.07.12.07.72-.17 1.39z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="container">
+        <a class="logo brand" href="index.html">
+          <img src="assets/logo2.png" alt="Industrial Power Solution Haiti">
+          <span class="brand-text">
+            <span class="brand-line brand-blue">INDUSTRIAL</span>
+            <span class="brand-line brand-orange">POWER SOLUTION</span>
+            <span class="brand-line brand-blue">HAITI</span>
+          </span>
+        </a>
+        <div class="navlinks">
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="product.html">Produits</a>
+          <a href="about.html">À propos</a>
+          <a class="active" href="contact.html">Contact</a>
+        </div>
+        <div class="navicons">
+          <a href="#" aria-label="Recherche"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2.2"/><path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Compte"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2.2"/></svg></a>
+          <a href="#" aria-label="Panier"><span class="cart-badge">0</span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2.2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2.2"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <div class="eyebrow">Support client</div>
+          <h1 class="hero-title">CONTACTEZ-NOUS</h1>
+          <p class="hero-description">Notre équipe est disponible pour répondre à vos questions, discuter de vos projets et vous proposer des solutions techniques adaptées à vos besoins.</p>
+          <div class="hero-buttons">
+            <a class="btn btn--orange" href="#form-section">NOUS CONTACTER</a>
+            <a class="btn btn--outline" href="https://wa.me/50956669084?text=Bonjour%20Industrial%20Power%20Solution%20Haiti%2C%20j%27ai%20besoin%20d%27aide%20pour%20un%20projet." target="_blank" rel="noopener">CONTACTER VIA WHATSAPP</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container contact-grid" id="form-section">
+      <article class="panel panel--form">
+        <div class="section-tag">Formulaire de contact</div>
+        <h2>Demandez une assistance rapide</h2>
+        <p>Remplissez le formulaire ci-dessous pour nous transmettre vos besoins. Nous reviendrons vers vous rapidement avec une proposition claire et professionnelle.</p>
+
+        <form class="form-grid" action="https://formsubmit.co/industrialpowersolutionhaiti@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande de contact IPS Haiti" />
+          <input type="hidden" name="_captcha" value="false" />
+          <div class="field">
+            <label for="name">Nom complet</label>
+            <input id="name" name="name" type="text" placeholder="Votre nom complet" required>
+          </div>
+          <div class="field">
+            <label for="email">Adresse email</label>
+            <input id="email" name="email" type="email" placeholder="vous@exemple.com" required>
+          </div>
+          <div class="field">
+            <label for="phone">Numéro de téléphone</label>
+            <input id="phone" name="phone" type="tel" placeholder="+509 0000 0000" required>
+          </div>
+          <div class="field">
+            <label for="company">Entreprise / Organisation (optionnel)</label>
+            <input id="company" name="company" type="text" placeholder="Nom de votre structure">
+          </div>
+          <div class="field full">
+            <label for="service">Service demandé</label>
+            <select id="service" name="service">
+              <option>Services électriques</option>
+              <option>Génératrices</option>
+              <option>Énergie solaire</option>
+              <option>Sécurité électronique</option>
+              <option>Informatique & Réseaux</option>
+              <option>Services mécaniques</option>
+              <option>Gestion de flottes</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre besoin, urgence ou projet." required></textarea>
+          </div>
+          <div class="field full">
+            <button class="btn btn--navy" type="submit">ENVOYER LA DEMANDE</button>
+            <p class="form-note">Nous respectons vos données et ne les utilisons que pour vous répondre.</p>
+          </div>
+        </form>
+      </article>
+
+      <article class="panel panel--info">
+        <div class="section-tag">Communication rapide</div>
+        <h3>Pourquoi nous contacter ?</h3>
+        <p>IPS Haiti vous accompagne rapidement pour vos interventions techniques, installations, maintenance et solutions d’énergie. Le contact direct permet de clarifier vos besoins et d’orienter votre demande vers la bonne équipe.</p>
+
+        <div class="contact-list">
+          <div class="contact-card">
+            <div class="contact-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:industrialpowersolutionhaiti@gmail.com">industrialpowersolutionhaiti@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19 19.5 19.5 0 0 1 5 12.81 19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L8 9.67a16 16 0 0 0 6.33 6.33l1.23-1.23a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <strong>Ligne directe</strong>
+              <a href="tel:+50956669084">+509 5666 9084</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s8-4.35 8-10a4 4 0 0 0-7-2.32A4 4 0 0 0 4 11c0 5.65 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+            <div>
+              <strong>Localisation</strong>
+              <p>P16, Village Ekam, Caracol, Haïti</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="container whatsapp-cta">
+      <article class="whatsapp-box">
+        <div>
+          <div class="whatsapp-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.34 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.51 2 12.04 2zm5.77 14.18c-.24.68-1.41 1.3-1.96 1.35-.5.05-1.12.07-1.8-.11-.42-.13-.95-.31-1.63-.61-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.31.38-.43.5-.14.14-.29.29-.12.57.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.45.29.14.45.12.62-.07.19-.22.72-.84.91-1.12.19-.29.38-.24.64-.14.26.1 1.67.79 1.96.93.29.14.48.22.55.34.07.12.07.72-.17 1.39z"/></svg></div>
+          <div class="section-tag" style="color:#BBF7D0">WhatsApp</div>
+          <h2>CONTACTEZ-NOUS SUR WHATSAPP</h2>
+          <p>Échangez directement avec notre équipe pour une assistance rapide et un accompagnement technique.</p>
+        </div>
+        <div style="display:grid;gap:12px;justify-items:start">
+          <a class="btn btn--whatsapp" href="https://wa.me/50956669084?text=Bonjour%20Industrial%20Power%20Solution%20Haiti%2C%20je%20souhaite%20vous%20contacter%20pour%20un%20besoin%20technique." target="_blank" rel="noopener">DISCUTER SUR WHATSAPP</a>
+          <div style="font-size:13px;color:rgba(255,255,255,.9)">WhatsApp Number: +509 5666 9084</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="container phone-section">
+      <div class="section-tag">Contacts téléphoniques</div>
+      <h2 style="font-size:28px;text-transform:uppercase;color:var(--navy-dark);margin:8px 0 6px;line-height:1.15">CONTACTS TÉLÉPHONIQUES</h2>
+      <p style="max-width:700px;color:#374151">Réservez une prise de contact directe pour les urgences, demandes de devis ou interventions techniques.</p>
+      <div class="phone-grid">
+        <article class="phone-card">
+          <h3>Numéro principal(Natcom)</h3>
+          <a href="tel:+50956669084">+509 5666 9084</a>
+          <span>Disponible pour l’assistance et les demandes de service.</span>
+        </article>
+        <article class="phone-card">
+          <h3>Numéro secondaire(Digicel)</h3>
+          <a href="tel:+50931619879">+509 3161 9879</a>
+          <span>Autre ligne directe pour les contacts commerciaux et techniques.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-cta container">
+      <article class="panel">
+        <div>
+          <div class="section-tag">Prêt à démarrer</div>
+          <h2>PRÊT À DISCUTER DE VOTRE PROJET ?</h2>
+          <p>IPS Haiti est prêt à accompagner votre organisation avec des solutions techniques, industrielles et énergétiques fiables.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn--orange" href="mailto:industrialpowersolutionhaiti@gmail.com">DEMANDER UN DEVIS</a>
+          <a class="btn btn--navy" href="tel:+50956669084">NOUS CONTACTER</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="service-cta">
+      <div class="container">
+        <h2 class="cta-title">BESOIN D’UN SERVICE ?</h2>
+        <div class="cta-subtitle">NOUS SOMMES LÀ POUR VOUS !</div>
+        <div class="cta-badges">
+          <div class="badge">Rapidité</div>
+          <div class="badge">Qualité</div>
+          <div class="badge">Fiabilité</div>
+        </div>
+        <p class="cta-text">Intervention technique, maintenance, installation et accompagnement selon vos besoins.</p>
+        <a class="cta-btn" href="https://wa.me/50956669084?text=Bonjour%20Industrial%20Power%20Solution%20Haiti%2C%20j%27ai%20besoin%20d%27un%20service.%20Pouvez-vous%20m%27aider%20%3F" target="_blank" rel="noopener">CONTACTEZ-NOUS SUR WHATSAPP</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>Industrial Power Solution Haiti</h3><p>Expertise au service de votre performance industrielle. Solutions électriques, mécaniques, solaires et techniques pour entreprises, institutions et industries.</p></div>
+        <div><h4>Navigation</h4><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="product.html">Produits</a><a href="about.html">À propos</a></div>
+        <div><h4>Contact</h4><p>+509 31619879<br>industrialpowersolutionhaiti@gmail.com<br>www.ips-haiti.com<br>P16, Village Ekam, Caracol, Haïti</p></div>
+      </div>
+      <div class="footer-accordion" aria-label="Liens rapides du footer">
+        <details open>
+          <summary>Industrial Power Solution Haiti</summary>
+          <p>Expertise au service de votre performance industrielle. Solutions électriques, mécaniques, solaires et techniques pour entreprises, institutions et industries.</p>
+        </details>
+        <details>
+          <summary>Navigation</summary>
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="product.html">Produits</a>
+          <a href="about.html">À propos</a>
+        </details>
+        <details>
+          <summary>Contact</summary>
+          <p>+509 31619879<br>industrialpowersolutionhaiti@gmail.com<br>www.ips-haiti.com<br>P16, Village Ekam, Caracol, Haïti</p>
+        </details>
+      </div>
+      <div class="footer-bottom">© 2026 Industrial Power Solution Haiti. Tous droits réservés.</div>
+    </div>
+  </footer>
+
+  <nav class="mobile-bottom-nav">
+    <a href="index.html" aria-label="Accueil">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Accueil</span>
+    </a>
+    <a href="services.html" aria-label="Services">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 13a18.15 18.15 0 0 1-20 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect width="20" height="14" x="2" y="6" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+      <span>Services</span>
+    </a>
+    <a href="product.html" aria-label="Produits">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Produits</span>
+    </a>
+    <a href="about.html" aria-label="À propos">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 16v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>À propos</span>
+    </a>
+    <a href="contact.html" class="active" aria-label="Contact">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+</body>
+</html>
